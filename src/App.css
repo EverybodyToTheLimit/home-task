@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0098a9;
+  padding: 0.5rem;
+}
+
+.container {
+  background-color: #ffdeba;
+  min-height: 100vh;
+}
+
+.content {
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+.main-image {
+  object-fit: contain;
+  overflow:hidden;
+}

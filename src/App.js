@@ -1,8 +1,13 @@
 import './App.css';
+import { Landing } from './Components/Landing';
+
+
 
 function App() {
   return (
-    <div></div>
+    <div className="App">
+      <Landing></Landing>
+    </div>
   );
 }
 
