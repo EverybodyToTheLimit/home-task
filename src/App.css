@@ -1,10 +1,11 @@
+/* General styling */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none
 }
-
+/* colors sampled from illustrator files */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -24,5 +25,206 @@
 
 .main-image {
   object-fit: contain;
-  overflow:hidden;
+  overflow: hidden;
+}
+
+/* main image placed in the centre of screen */
+.holiday {
+  display:none;
+  position: absolute;
+  height: 30rem;
+  top: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* main image animation from middle out */
+.holiday-active {
+  display:flex;
+  transition: width 1s ease-in-out;
+  animation: reveal 3s;
+}
+
+/* initial door styling */
+.doors {
+  display: flex;
+  justify-content: center;
+  position:relative;
+  z-index: 8;
+}
+
+.left-door{
+  height: 30rem;
+  z-index: 1;
+}
+
+.right-door{
+  height: 30rem;
+  z-index: 1;
+}
+/* individual door animations */
+
+.left-active {
+  animation: linear;
+  animation-name: moveLeft;
+  animation-duration: 2s;
+  transform: translateX(-200%);
+}
+
+.right-active {
+  animation: linear;
+  animation-name: moveRight;
+  animation-duration: 2s;
+  transform: translateX(200%);
+}
+
+/* main section and captions */
+
+.main-section {
+  position:relative;
+}
+
+.captions {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-caption {
+  min-height: 12rem;
+}
+
+.top-caption {
+  min-height: 6rem;
+
+}
+
+.captions {
+  display:flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* video player button placed centrally with on hover aimation */
+
+.video-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(390deg, rgba(255,173,145,1), transparent) rgba(255,124,175,1);
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: large;
+  animation-duration: 2s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.video-player:hover {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.video-player-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%);
+  width: 640px;
+  height: 360px;
+  transition: width 1s ease-in-out;
+}
+
+.watch-video {
+  display: flex;
+  justify-content: center;
+}
+
+/* plane object*/
+
+.plane {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index:2;
+  animation: linear;
+  animation-name: fly;
+  animation-duration: 20s;
+  visibility: hidden; 
+  width: 200px;
+}
+
+/* Animations for doors */
+
+@keyframes moveLeft {
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(-200%);}
+}
+
+@keyframes moveRight {
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(200%);}
+}
+
+/* Animations for beach scene */
+
+@keyframes reveal {
+  0% {
+    clip-path: inset(0px 50% 0px 50%);
+    -webkit-clip-path: inset(0px 50% 0px 50%);
+   }
+  100% {
+     clip-path: inset(0px 0px 0px 0px);
+     -webkit-clip-path: inset(0px 0px 0px 0px);
+  }
+}
+
+/* Animations for player */
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animations for plane */
+@keyframes fly {
+  0% {
+    left: 80%;
+    visibility:visible;  
+  }
+  100% {
+    left: 5%;
+    visibility: hidden;   
+  }
+}
+
+
+/* Animations for player button */
+@keyframes button {
+  0% {
+    background: linear-gradient(180deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%);
+  }
+  25% {
+    background: linear-gradient(270deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%); 
+  }
+  50% {
+    background: linear-gradient(0deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%); 
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%); 
+  }
 }
