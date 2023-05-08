@@ -33,12 +33,10 @@
   display:none;
   position: absolute;
   height: 30rem;
-  top: 0;
   z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 /* main image animation from middle out */
@@ -48,22 +46,33 @@
   animation: reveal 3s;
 }
 
+/* .holiday-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+} */
+
+
+
 /* initial door styling */
 .doors {
   display: flex;
   justify-content: center;
   position:relative;
   z-index: 8;
+  width: 1300px;
 }
 
 .left-door{
   height: 30rem;
-  z-index: 1;
+  z-index: 7;
 }
 
 .right-door{
   height: 30rem;
-  z-index: 1;
+  z-index: 7;
 }
 /* individual door animations */
 
@@ -85,6 +94,8 @@
 
 .main-section {
   position:relative;
+  display: flex;
+  justify-content: center;
 }
 
 .captions {
@@ -160,7 +171,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  z-index:2;
+  z-index:1;
   animation: linear;
   animation-name: fly;
   animation-duration: 20s;

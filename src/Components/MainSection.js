@@ -17,7 +17,7 @@ export const MainSection = () => {
     let animateDoor = () => {       //main function to control the flow of animations
         setAnimationState(true)
         setTimeout(() => { setAnimationFinished(true)}, 1000)
-        setTimeout(() => { setPlaneGo(true)}, 1500)
+        setTimeout(() => { setPlaneGo(true)}, 2500)
     }
 
 
@@ -44,10 +44,10 @@ export const MainSection = () => {
             <div className="doors" onClick={animateDoor}>
                 <img src={door} className={animationState ? "main-image left-door left-active" : "main-image left-door"} alt="left-door"></img>
                 <img src={door} className={animationState ? "main-image right-door right-active" : "main-image right-door"}  alt="right-door"></img>
+                <img src={holiday} className={animationState ? "main-image holiday holiday-active" : "main-image holiday"} alt="beach"></img>
+                    {/* plane component */}
+                {planeGo ? (<img className="plane" src={plane} alt="plane"></img>) : null}
             </div>
-            <img src={holiday} className={animationState ? "main-image holiday holiday-active" : "main-image holiday"} alt="beach"></img>
-                {/* plane component */}
-            {planeGo ? (<img className="plane" src={plane} alt="plane"></img>) : null}
             
         </div>
 
