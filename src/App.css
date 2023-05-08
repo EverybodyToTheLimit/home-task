@@ -99,6 +99,10 @@
 }
 
 .captions {
+  font-family: Londrina;
+  color: #ff7caf;
+  font-size: 30px;
+  font-weight:bolder;
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -168,7 +172,7 @@
 /* plane object*/
 
 .plane {
-  top: 0;
+  top: 10%;
   left: 0;
   position: absolute;
   z-index:1;
@@ -176,7 +180,7 @@
   animation-name: fly;
   animation-duration: 20s;
   visibility: hidden; 
-  width: 200px;
+  width: 150px;
 }
 
 /* Animations for doors */
@@ -214,7 +218,7 @@
 /* Animations for plane */
 @keyframes fly {
   0% {
-    left: 80%;
+    left: 85%;
     visibility:visible;  
   }
   100% {
@@ -238,4 +242,73 @@
   100% {
     background: linear-gradient(90deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%); 
   }
+}
+
+/* responsive design media queries */
+
+@media screen and (max-width: 480px) {
+  .logos {
+    width: 60%;
+  }
+  .top-caption {
+
+  }
+  .right-door, .left-door {
+    height: 20rem;
+  }
+
+  .holiday {
+    height: 20rem;
+  }
+
+  .left-active {
+    animation: linear;
+    animation-name: moveLeft;
+    animation-duration: 2s;
+    transform: translateX(-100%);
+  }
+  
+  .right-active {
+    animation: linear;
+    animation-name: moveRight;
+    animation-duration: 2s;
+    transform: translateX(100%);
+  }
+
+  .plane {
+    top: 10%;
+    width: 100px;
+  }
+
+  #react-player {
+    width: 300px;
+
+  }
+
+  @keyframes moveLeft {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
+  }
+  
+  @keyframes moveRight {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(100%);}
+  }
+
+  @keyframes fly {
+    0% {
+      left: 100%;
+      visibility:visible;  
+    }
+    100% {
+      left: 0%;
+      visibility: hidden;   
+    }
+  }
+}
+
+
+@font-face {
+  font-family: 'Moonlight';
+  src: local('Moonlight'), url("./fonts/moonlite-outline.ttf") format('truetype');
 }

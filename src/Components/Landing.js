@@ -14,10 +14,7 @@ export const Landing = () => {
             <div className="content" style={{
                 backgroundImage: `url(${background})`
             }}>
-                <div className="captions top-caption"style={{
-                backgroundImage: `url(${campaign})`
-            }}>
-                </div>
+                <div className="captions top-caption">THIS IS A CAMPAIGN FOR A DESTINATION</div>
                 <MainSection></MainSection>
                 <div className="captions bottom-caption"style={{
                 backgroundImage: `url(${slide})`

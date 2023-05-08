@@ -6,7 +6,7 @@ export const Nav = () => {
 
     //simple nav component which can be expanded depending on development of the project
     <div className='navbar'>
-        <img src={logo} alt="logo"></img>
+        <img className="logos" src={logo} alt="logo"></img>
     </div>
   )
 }

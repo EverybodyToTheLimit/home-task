@@ -27,13 +27,21 @@ export const MainSection = () => {
         <div className='main-section'> 
         {/* conditional creating either Video Player, Watch Video button or nothing depending on state */}
             { animationFinished ? 
-                (playVideo ? <ReactPlayer className="video-player video-player-big"
+                (playVideo ? <ReactPlayer className="video-player video-player-big" id="react-player"
                     url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4?autoplay=1"
-                    height="75%"
                     light="linear-gradient(90deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%);"
                     playing
                     autoplay="true"
+                    width='59vw'
+                    height='auto'
                     controls
+                    config={{
+                        file: { 
+                          attributes: { 
+                            preload: 'none' 
+                          } 
+                        } 
+                      }}
                 ></ReactPlayer> : <div className=
                     { videoClicked ? "video-player video-player-big" : "video-player"} onClick={() => {setvideoClicked(true)}}>
                 {videoClicked ? (<div className='watch-video' >{">"}</div>) : (<div className='watch-video' onClick={() => setPlayVideo(true)}>WATCH VIDEO</div>)}
