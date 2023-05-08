@@ -99,30 +99,37 @@
 }
 
 .captions {
-  font-family: Londrina;
+  font-family: Moonlight;
   color: #ff7caf;
-  font-size: 30px;
-  font-weight:bolder;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
+  font-size: 40px;
+  font-weight:bold;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bottom-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   min-height: 12rem;
 }
 
 .top-caption {
-  min-height: 6rem;
-
-}
-
-.captions {
-  display:flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
+  align-items: center;
+  min-height: 6rem;
+  text-align: center;
+
 }
+
+#explore {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+}
+
 
 /* video player button placed centrally with on hover aimation */
 

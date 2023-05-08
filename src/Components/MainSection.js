@@ -29,11 +29,10 @@ export const MainSection = () => {
             { animationFinished ? 
                 (playVideo ? <ReactPlayer className="video-player video-player-big" id="react-player"
                     url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4?autoplay=1"
-                    light="linear-gradient(90deg, rgba(255,173,145,1) 0%, rgba(255,124,175,1) 100%);"
                     playing
                     autoplay="true"
-                    width='59vw'
-                    height='auto'
+                    width="48%"
+                    height="auto"
                     controls
                     config={{
                         file: { 
