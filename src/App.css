@@ -287,10 +287,7 @@
     width: 100px;
   }
 
-  #react-player {
-    width: 300px;
-
-  }
+ 
 
   @keyframes moveLeft {
     0% {transform: translateX(0%);}

@@ -31,7 +31,7 @@ export const MainSection = () => {
                     url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4?autoplay=1"
                     playing
                     autoplay="true"
-                    width="48%"
+                    width="50%"
                     height="auto"
                     controls
                     config={{
